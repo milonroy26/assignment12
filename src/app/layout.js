@@ -1,9 +1,8 @@
-"use client"
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
-import NextNProgress from 'nextjs-progressbar';
+// import NextNProgress from 'nextjs-progressbar';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <NextNProgress />
+        {/* <NextNProgress /> */}
         <Navbar></Navbar>
         <div className="mx-auto md:px-20">
           <div className="grid grid-cols-12">
