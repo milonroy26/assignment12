@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -37,11 +38,11 @@ const Footer = () => {
           </div>
           <div className="mt-5 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
             <p className="order-2 md:order-1 mt-8 md:mt-0  text-white">
-              &copy; Beautiful Footer, 2023.
+              &copy; Created By Milon Chandro | All Rights Reserved!
             </p>
             <div className="order-1 md:order-2">
-              <span className="px-2">About us</span>
-              <span className="px-2 border-l">Contact us</span>
+              <Link href={"/about"} className="px-2">About us</Link>
+              <Link href={"/contact"} className="px-2 border-l">Contact us</Link>
               <span className="px-2 border-l">Privacy Policy</span>
             </div>
           </div>

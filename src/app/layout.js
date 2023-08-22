@@ -1,7 +1,9 @@
+"use client"
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
+import NextNProgress from 'nextjs-progressbar';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+      <NextNProgress />
         <Navbar></Navbar>
         <div className="mx-auto md:px-20">
           <div className="grid grid-cols-12">
@@ -22,7 +25,7 @@ export default function RootLayout({ children }) {
                 <img src="http://absolute.cactusthemes.com/wp-content/uploads/2014/12/side-ads-01.png" />
               </a>
             </div>
-            <div className="mainContent shadow-md col-span-8 bg-slate-100 ">
+            <div className="mainContent shadow-md col-span-8 bg-slate-200 dark:bg-zinc-800">
               {children}
               <Footer></Footer>
             </div>
