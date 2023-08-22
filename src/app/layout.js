@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,12 +15,24 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Navbar></Navbar>
-        <div className="container mx-auto my-16 p-9">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            milon
+        <div className="mx-auto md:px-20">
+          <div className="grid grid-cols-12">
+            <div className="sidebar1 h-[100vh] col-span-2 py-8 ms-5">
+              <a href="#">
+                <img src="http://absolute.cactusthemes.com/wp-content/uploads/2014/12/side-ads-01.png" />
+              </a>
+            </div>
+            <div className="mainContent shadow-md col-span-8 bg-slate-100 ">
+              {children}
+              <Footer></Footer>
+            </div>
+            <div className="sidebar2 h-[100vh] py-8 col-span-2">
+              <a href="#">
+                <img src="http://absolute.cactusthemes.com/wp-content/uploads/2014/12/side-ads-02.png" />
+              </a>
+            </div>
           </div>
         </div>
-        {children}
       </body>
     </html>
   );

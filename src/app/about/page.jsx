@@ -1,8 +1,17 @@
+import About from "@/components/About";
+
 const page = () => {
   return (
-    <div>
-      <h1>about</h1>
-    </div>
+    <>
+      <div className="text-center py-5 pb-20">
+        <h1 className="text-5xl text-slate-950 font-bold">TOP NEWS</h1>
+        <p className="mt-2 text-lg font-semibold text-slate-900">
+          -- About Me --
+        </p>
+      </div>
+      <hr />
+      <About></About>
+    </>
   );
 };
 
