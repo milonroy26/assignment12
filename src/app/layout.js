@@ -1,9 +1,8 @@
-"use client";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
-import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
+import ProgressBar from "@/components/ProgressBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ProgressBar
-          height="4px"
-          color="red"
-          options={{ showSpinner: false }}
-          shallowRouting
-        />
+        <ProgressBar></ProgressBar>
         <Navbar></Navbar>
         <div className="mx-auto md:px-20">
           <div className="grid grid-cols-12">
