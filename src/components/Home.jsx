@@ -25,7 +25,7 @@ const Home = async () => {
           ) : (
             postBlog.map((posts, index) => (
               <Link
-                href={"#"}
+                href={`/blog/${posts.id}`}
                 key={index.toString()}
                 className="card card-compact w-100 glass"
               >
